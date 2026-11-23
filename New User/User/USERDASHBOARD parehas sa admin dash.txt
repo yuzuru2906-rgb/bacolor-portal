@@ -1,0 +1,16 @@
+USERDASHBOARD parehas sa admin dashboard  
+
+
+Email or MobileNumber = members(11 numbers formatting (+63)0000-000-0000) Email ()
+Birthdate = infinite dates
+* = required fill ups
+passwords = bottom 
+all pictures = resettable
+remove precinct number
+family member(register)page = remove Search registered residents, Select the exact registered profile, Emergency Contact. 
+
+government ID's lagay sa below ng Blood type
+
+3rd page is Verifications of ID's
+
+

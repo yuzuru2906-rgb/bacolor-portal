@@ -1,0 +1,308 @@
+/* ===========================
+   Bacolor Civil ID Portal
+   style.css  (styles for the login / register page)
+   =========================== */
+
+/* colors and stuff i use everywhere */
+:root {
+  --sidebar-bg: #133224;
+  --sidebar-active: #1c4532;
+  --sidebar-hover: #173b2b;
+  --sidebar-text: #e1eae4;
+  --body-bg: #eaf0ec;
+  --card-bg: #ffffff;
+  --text-dark: #1b2821;
+  --text-muted: #67776d;
+  --accent-green: #176b45;
+  --accent-gold: #b3821a;
+  --accent-red: #bb2d3b;
+  --accent-light-green: #4d9c75;
+  --border-color: #e2e8e3;
+  --shadow-sm: 0 4px 16px rgba(18, 45, 33, 0.05);
+  --font-main: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+:root {
+      --ink: #14261c;
+      --muted: #5c6b62;
+      --paper: #f7f8f5;
+      --surface: #ffffff;
+      --surface-alt: #f1f3f1;
+      --line: rgba(20, 38, 28, 0.13);
+      --green: #146c43;
+      --green-hover: #125a39;
+      --green-soft: #eaf4ed;
+      --red: #c8102e;
+      --shadow: 0 10px 30px rgba(20, 38, 28, 0.1);
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 14px/1.5 'IBM Plex Sans', sans-serif;
+    }
+
+    /* Top Brand Bar matching image[cite: 9] */
+    .portal-topbar {
+      background: #15221c;
+      color: #ffffff;
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .portal-brand-seal {
+      width: 42px;
+      height: 42px;
+      border: 2px solid #8cc29f;
+      border-radius: 50%;
+      object-fit: contain;
+      background: transparent;
+      display: grid;
+      place-items: center;
+    }
+
+    .portal-brand-text h1 {
+      font: 600 16px 'Source Serif 4', serif;
+      margin: 0;
+      color: #ffffff;
+    }
+
+    .portal-brand-text p {
+      font-size: 11px;
+      color: #9cb8a5;
+      margin: 2px 0 0;
+    }
+
+/* reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #ffffff;
+  color: var(--text-dark);
+  line-height: 1.4;
+  font-size: 13px;
+  min-height: 100vh;
+}
+
+/* the two screens (login and app), only one shows at a time */
+.app-screen {
+  display: none;
+  min-height: 100vh;
+}
+
+.app-screen.active-screen {
+  display: flex;
+}
+
+
+/* ========== LOGIN / REGISTER ========== */
+
+.auth-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.auth-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.auth-header {
+  background-color: var(--sidebar-bg);
+  color: #ffffff;
+  padding: 24px;
+  text-align: center;
+  border-bottom: 3px solid var(--accent-gold);
+}
+
+.auth-header h2 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.auth-header p {
+  font-size: 11px;
+  color: #a0c2af;
+}
+
+.auth-tabs {
+  display: flex;
+  background-color: #f0f4f1;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.auth-tab-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.auth-tab-btn.active {
+  background: #ffffff;
+  color: var(--accent-green);
+  border-bottom: 2px solid var(--accent-green);
+}
+
+.auth-body {
+  padding: 24px;
+}
+
+.auth-form {
+  display: none;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-form.active-form {
+  display: flex;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form-control {
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 12px;
+  outline: none;
+  transition: border 0.2s;
+  background: #fff;
+}
+
+.form-control:focus {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 0 3px rgba(23, 107, 69, 0.1);
+}
+
+.btn-submit {
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent-green);
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: #125436;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.demo-credentials {
+  margin-top: 16px;
+  padding: 10px 12px;
+  background-color: #f7faf8;
+  border: 1px dashed var(--border-color);
+  border-radius: 6px;
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.demo-credentials code {
+  font-family: monospace;
+  font-weight: bold;
+  color: var(--accent-green);
+}
+
+
+/* ========== TOAST (little popup message) ========== */
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--sidebar-bg);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 200;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ===========================
+   PASSWORD TOGGLE BUTTON STYLES
+   =========================== */
+
+.password-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrap .form-control {
+  width: 100%;
+  padding-right: 40px; /* leave space for the eye button */
+}
+
+.toggle-pass-btn {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-muted);
+  padding: 4px;
+  display: grid;
+  place-items: center;
+}
+
+.toggle-pass-btn:hover {
+  color: var(--text-dark);
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ID Details | Bacolor Civil ID</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/Portal.css">
+</head>
+<body data-view="citizenRegisterDetails">
+<div class="topbar">
+  <div class="brand">
+    <img class="seal" data-seal alt="Seal of the Municipality of Bacolor, Pampanga">
+    <div class="brand-text">
+      <div class="name">Bacolor Population Registry</div>
+      <div class="tag">Municipality of Bacolor, Pampanga</div>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <button class="home-link" id="homeLink" onclick="setView('home')">← Home</button>
+    <button class="home-link" id="logoutLink" onclick="logout()">Log out</button>
+  </div>
+</div>
+<main id="app"></main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="JavaScript/assets.js"></script>
+<script src="JavaScript/portal.js"></script>
+</body>
+</html>
